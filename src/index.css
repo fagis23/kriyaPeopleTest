@@ -1,13 +1,181 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.product,
+.checkout-page {
+  padding: 0 10rem;
+  height: 90vh;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.product-container {
+  display: flex;
+  width: 100%;
+}
+
+.list-items,
+.list-checkout {
+  flex: 1;
+}
+
+.list-checkout {
+  padding-left: 16px;
+}
+
+.list-items .title,
+.list-checkout .checkout-title {
+  padding: 12px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-card {
+  height: 460px;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+.list-items .card {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.list-items .card:last-child {
+  border-bottom: none;
+}
+
+.list-items .card div:nth-child(1) {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  background: coral;
+  color: white;
+}
+.list-items .card div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.list-items .card div:nth-child(3) {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-card {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  overflow-y: auto;
+  max-height: 378px;
+}
+
+.checkout-header {
+  display: flex;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px 0;
+}
+
+.checkout-card .card {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+
+.checkout-header p:nth-child(1),
+.checkout-card .card .card-id {
+  text-align: center;
+  flex: 0.3;
+}
+.checkout-header p:nth-child(2),
+.checkout-card .card .card-title {
+  flex: 1;
+  text-align: center;
+}
+.checkout-header p:nth-child(3),
+.checkout-card .card .card-count {
+  flex: 0.3;
+  text-align: center;
+}
+.checkout-header p:nth-child(4),
+.checkout-card .card .card-action {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-total {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 12px 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-component {
+  background: lightcoral;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  border: transparent;
+  outline: none;
+}
+
+/* checkout page */
+/* .checkout-page {
+} */
+.checkout-page .header {
+  text-align: center;
+}
+.checkout-page .checkout-button {
+  margin: 10px 0;
+  display: flex;
+}
+.checkout-page .checkout-button button:nth-child(1),
+.checkout-page .checkout-button button:nth-child(2) {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightcoral;
+  padding: 10px;
+  color: lightcoral;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.checkout-page .checkout-button button:nth-child(2) {
+  margin-left: 10px;
+  background-color: lightcoral;
+  color: white;
 }
